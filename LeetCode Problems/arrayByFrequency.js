@@ -4,6 +4,8 @@
 
 var frequencySort = function(nums) {
     
+  const result = [];
+  
   let tracker = {}
   
   for(let i=0; i<nums.length; i++){
@@ -15,9 +17,16 @@ var frequencySort = function(nums) {
       }
   }
   
-  let keys = Object.keys(tracker);
+  let entries = Object.entries(tracker);
   
-  for(let i=0; i<keys.length); i++){
+  entries.sort(function(a,b){ return a[1]-b[1] });
+  
+  for(let i=0; i<entries.length; i++){
       
+      for(let j=0; j<entries[i][1]; j++){
+          result.push(entries[i][0])
+      }
   }
+  
+  return result;
 };
