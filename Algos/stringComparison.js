@@ -14,3 +14,4 @@ function numSourPatch(s, c) {
     }
   
     return count;
+  }

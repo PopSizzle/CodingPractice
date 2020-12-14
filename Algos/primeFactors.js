@@ -32,3 +32,5 @@ function primeFactors(num) {
   }
   
   return factors;
+
+}
